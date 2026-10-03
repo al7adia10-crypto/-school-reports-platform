@@ -206,7 +206,13 @@
 <div id="toast" class="toast"></div>
 <script src="app.js"></script>
 <script>
-window.renderStandardReport = window.previewReport;
+window.__originalPreviewReport = previewReport;
+
+window.renderStandardReport = function(r){
+  window.__originalPreviewReport(r);
+  return document.querySelector('#preview .paper').innerHTML;
+};
+
 window.ministryLogoHTML =
   document.querySelector('.logo-card svg')?.outerHTML || '';
 </script>
