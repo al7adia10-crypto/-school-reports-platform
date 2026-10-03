@@ -205,4 +205,806 @@
 </div>
 <div id="toast" class="toast"></div>
 <script src="app.js"></script>
+<style id="approvedTemplatesStyle">
+.apr{font-family:inherit;color:#25596a;background:#fff;position:relative;overflow:hidden;padding:10mm 9mm}.apr *{box-sizing:border-box}.apr svg{max-width:100%}.apr-head{display:grid;grid-template-columns:1fr 40mm;gap:6mm;align-items:center;position:relative;z-index:2}.apr-head .gov{display:grid;gap:1mm;font-size:8pt}.apr-head .gov b{font-size:9pt}.apr-logo svg{width:36mm}.apr-title{margin:4mm 0;padding:3mm;border-radius:3mm;text-align:center;color:#fff;font-weight:900;font-size:14pt;background:linear-gradient(90deg,#59c9a5,#35b9b0,#557dc0)}.apr-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5mm}.apr-meta>div,.apr-box{border:1px solid #b4ddd5;border-radius:3mm;padding:2.6mm;background:#fff}.apr-meta span,.apr-box h4{color:#178391;font-weight:900;font-size:8pt}.apr-meta b{display:block;margin-top:1mm;font-size:8.5pt;color:#4c625d}.apr-grid{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-top:3mm}.apr-box{min-height:34mm}.apr-box h4{margin:0 0 2mm;font-size:9pt}.apr-box p{margin:0;white-space:pre-wrap;line-height:1.75;font-size:8pt;color:#4f655e}.apr-sign{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:5mm}.apr-sign>div{border:1px solid #b4ddd5;border-radius:3mm;padding:3mm;font-size:8pt;display:grid;gap:1mm}.apr-sign b{color:#176d7c}.apr-curve{position:absolute;border-radius:50%;z-index:0}.apr .c1{width:70mm;height:70mm;right:-34mm;top:-37mm;background:#35b9b055}.apr .c2{width:50mm;height:50mm;right:10mm;top:-32mm;background:#8be0bf66}.ana{padding:9mm 8mm}.ana-title{background:linear-gradient(90deg,#31bcb6,#267caf)}.ana-stat{display:grid;grid-template-columns:1.15fr .85fr;gap:4mm;margin-top:3mm}.ana-table h3,.ana-chart h3{text-align:center;color:#148b94;font-size:9pt;margin:1mm 0 2mm}.ana-th,.ana-tr{display:grid;grid-template-columns:1fr 1fr .65fr;gap:1.5mm;align-items:center}.ana-th{font-size:7pt;color:#6d7d77}.ana-tr{margin:1mm 0}.ana-tr span,.ana-tr b{border:1px solid #dce7e3;border-radius:2mm;padding:1.5mm;text-align:center;font-size:7pt}.ana-tr .lv{color:#fff;font-weight:900;border:0}.lv0{background:#43c17a}.lv1{background:#35b8af}.lv2{background:#3f9edb}.lv3{background:#f39a34}.lv4{background:#f1626b}.ana-kpi{display:grid;gap:1.3mm}.ana-kpi>div{display:grid;grid-template-columns:1fr .7fr;border:1px solid #d8e6e2;border-radius:2mm;overflow:hidden}.ana-kpi span{padding:1.7mm 2mm;color:#188a94;font-weight:900;font-size:7.5pt;border-left:1px solid #d8e6e2}.ana-kpi b{padding:1.7mm;text-align:center;font-size:7.5pt}.ana-chart{border:1px solid #8fd1c2;border-radius:3mm;padding:3mm;margin-top:3mm}.ana-chart h3{text-align:center}.rings{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm}.ring{width:24mm;height:24mm;border-radius:50%;display:grid;place-items:center;margin:auto;position:relative;background:conic-gradient(var(--c) calc(var(--p)*1%),#e8edf0 0)}.ring:after{content:"";position:absolute;inset:3.2mm;background:#fff;border-radius:50%}.ring span{position:relative;z-index:2;text-align:center;font-size:6.6pt}.ring b{display:block}.bars{height:34mm;display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;align-items:end;padding:0 4mm}.baritem{height:100%;display:grid;grid-template-rows:1fr auto;gap:1mm;text-align:center}.bartrack{height:100%;display:flex;align-items:flex-end;background:#edf1f4;border-radius:2mm;overflow:hidden}.bar{width:100%;min-height:3mm;position:relative}.bar b{position:absolute;top:-4.5mm;left:0;right:0;color:#3d514a;font-size:7pt}.baritem>span{font-size:6.7pt}.ana-notes{display:grid;grid-template-columns:1fr 1fr;gap:2.5mm;margin-top:3mm}.ana-notes .wide{grid-column:1/-1}.cert{min-height:210mm;padding:9mm 12mm;color:#2e5d52}.cert-body{text-align:center;max-width:225mm;margin:auto;position:relative;z-index:2}.cert-body h1{font-size:24pt;margin:10mm 0 3mm}.cert-body>p{font-size:10.5pt;line-height:1.9}.recipient{margin:4mm auto;padding:2mm 15mm;width:max-content;min-width:100mm;max-width:210mm;border-radius:999px;font-size:20pt;font-weight:900}.reason{display:inline-block;margin-top:2mm;font-weight:900;font-size:11pt}.cert.student h1{color:#176b5c}.cert.student .recipient{background:#e8f7f1;color:#1b765f}.cert.teacher h1{color:#6948b8}.cert.teacher .recipient{background:#f0ebfb;color:#714fc2}.cert.training h1{color:#176da4}.cert.training .recipient{background:#eaf4fa;color:#1b70a8}.cert-corner{position:absolute;border-radius:50%;width:100mm;height:100mm;opacity:.18}.cert .cc1{right:-50mm;top:-50mm;background:#58c99f}.cert .cc2{left:-50mm;bottom:-50mm;background:#8a70de}.cert.teacher .cc1{background:#8a70de}.cert.training .cc1{background:#4aa3dc}.medal{position:absolute;right:18mm;top:32mm;width:17mm;height:17mm;border-radius:50%;background:linear-gradient(145deg,#f8d77d,#c69228);display:grid;place-items:center;color:#fff4bd;z-index:3}.cert .apr-sign{margin-top:12mm;gap:70mm}.cert .apr-sign>div{border:0;text-align:center}.details{display:flex;justify-content:center;gap:4mm;margin-top:4mm}.details span{border:1px solid #dce8e4;border-radius:999px;padding:1.5mm 4mm;font-size:8pt}
+@media(max-width:800px){.apr{padding:15px 11px}.apr-meta,.apr-grid,.ana-stat,.ana-notes{grid-template-columns:1fr}.ana-notes .wide{grid-column:auto}.ring{width:50px;height:50px}.ring:after{inset:8px}.cert .apr-sign{gap:20px}.cert-body h1{font-size:28px}.recipient{font-size:24px;min-width:70%}}
+@media print{.apr:not(.cert){min-height:297mm}.cert{min-height:210mm}}
+</style>
+
+<script>
+(()=>{
+const set=(c,f)=>{
+const t=templates.find(x=>x.code===c);
+if(t)t.fields=f
+};
+
+set('ACT',[
+'اسم البرنامج / النشاط',
+'المنفذة',
+'المشاركات',
+'المجال',
+'الفئة المستهدفة',
+'تاريخ التنفيذ',
+'مكان التنفيذ',
+'مدة التنفيذ',
+'عدد المستفيدات',
+'الأهداف',
+'خطوات التنفيذ',
+'الأدوات والمواد المستخدمة',
+'النتائج',
+'التحديات والمعوقات',
+'التوصيات والمقترحات'
+]);
+
+set('GRA',[
+'الصف',
+'المادة',
+'نوع الاختبار',
+'درجة الاختبار',
+'عدد الطالبات',
+'أعلى درجة',
+'أقل درجة',
+'المتوسط',
+'نسبة الإتقان',
+'مجموع الدرجات',
+'ممتاز',
+'جيد جدًا',
+'جيد',
+'مقبول',
+'ضعيف',
+'نقاط القوة',
+'نقاط الضعف',
+'التوصيات',
+'الخطة العلاجية'
+]);
+
+const v=(p,...k)=>{
+for(const x of k){
+if(p&&p[x]!=null&&String(p[x]).trim()!==''){
+return String(p[x])
+}
+}
+return ''
+};
+
+const n=x=>Number(
+String(x??'')
+.replace(/[^\d.%-]/g,'')
+.replace('%','')
+)||0;
+
+const sec=(t,val)=>`
+<article class="apr-box">
+<h4>${t}</h4>
+<p>${escapeHtml(
+val||
+'....................................................................................................\n....................................................................................................\n....................................................................................................'
+)}</p>
+</article>`;
+
+window.renderActivityReport=r=>{
+const p=r.data||r.payload||{};
+const g=(...k)=>v(p,...k);
+
+return `
+<div class="apr">
+<div class="apr-curve c1"></div>
+<div class="apr-curve c2"></div>
+
+<header class="apr-head">
+<div class="gov">
+<b>الإدارة العامة للتعليم بمنطقة الحدود الشمالية</b>
+<span>${escapeHtml(cfg.schoolName)}</span>
+</div>
+<div class="apr-logo">${ministryLogoHTML}</div>
+</header>
+
+<div class="apr-title">تقرير تنفيذ برنامج / نشاط</div>
+
+<div class="apr-meta">
+
+<div>
+<span>اسم البرنامج / النشاط</span>
+<b>${escapeHtml(g('اسم البرنامج / النشاط')||r.title||'—')}</b>
+</div>
+
+<div>
+<span>المجال</span>
+<b>${escapeHtml(g('المجال')||'—')}</b>
+</div>
+
+<div>
+<span>الفئة المستهدفة</span>
+<b>${escapeHtml(g('الفئة المستهدفة')||'—')}</b>
+</div>
+
+<div>
+<span>تاريخ التنفيذ</span>
+<b>${escapeHtml(g('تاريخ التنفيذ')||r.date||'—')}</b>
+</div>
+
+<div>
+<span>مكان التنفيذ</span>
+<b>${escapeHtml(g('مكان التنفيذ')||'—')}</b>
+</div>
+
+<div>
+<span>مدة التنفيذ / المستفيدات</span>
+<b>${escapeHtml(
+(g('مدة التنفيذ')||'—')+
+' / '+
+(g('عدد المستفيدات')||r.benef||'—')
+)}</b>
+</div>
+
+</div>
+
+<section class="apr-grid">
+
+${sec(
+'الأهداف',
+g('الأهداف')
+)}
+
+${sec(
+'خطوات التنفيذ',
+g('خطوات التنفيذ')
+)}
+
+${sec(
+'الفئة المستهدفة',
+g('الفئة المستهدفة')
+)}
+
+${sec(
+'الأدوات والمواد المستخدمة',
+g('الأدوات والمواد المستخدمة')
+)}
+
+${sec(
+'النتائج',
+g('النتائج')
+)}
+
+${sec(
+'التحديات والمعوقات',
+g('التحديات والمعوقات')
+)}
+
+${sec(
+'التوصيات والمقترحات',
+g('التوصيات والمقترحات')
+)}
+
+${sec(
+'المرفقات',
+'□ صور من التنفيذ\n□ قوائم الحضور\n□ نماذج من أعمال الطالبات\n□ أخرى'
+)}
+
+</section>
+
+<footer class="apr-sign">
+
+<div>
+<b>معدة التقرير</b>
+<span>الاسم: ${escapeHtml(g('المنفذة')||'........................')}</span>
+<span>التوقيع: ........................</span>
+</div>
+
+<div>
+<b>مديرة المدرسة</b>
+<span>الاسم: ${escapeHtml(cfg.principalName)}</span>
+<span>التوقيع: ........................</span>
+</div>
+
+</footer>
+</div>`;
+};
+
+const ranges=m=>{
+m=Math.max(
+1,
+Math.round(m||40)
+);
+
+const c=p=>Math.ceil(m*p);
+
+return [
+`${c(.9)} - ${m}`,
+`${c(.8)} - ${c(.9)-1}`,
+`${c(.7)} - ${c(.8)-1}`,
+`${c(.5)} - ${c(.7)-1}`,
+`0 - ${c(.5)-1}`
+];
+};
+
+window.renderAnalysisReport=r=>{
+const p=r.data||r.payload||{};
+
+const total=
+n(p['عدد الطالبات'])||
+n(p['عدد المستهدفات']);
+
+const max=
+n(p['درجة الاختبار'])||
+n(p['أعلى درجة'])||
+40;
+
+const avg=
+n(p['المتوسط'])||
+n(p['متوسط البعدي']);
+
+const high=
+n(p['أعلى درجة'])||
+max;
+
+const low=
+n(p['أقل درجة']);
+
+const master=
+n(p['نسبة الإتقان'])||
+n(p['نسبة التحسن']);
+
+const names=[
+'ممتاز',
+'جيد جدًا',
+'جيد',
+'مقبول',
+'ضعيف'
+];
+
+const colors=[
+'#43c17a',
+'#35b8af',
+'#3f9edb',
+'#f39a34',
+'#f1626b'
+];
+
+const counts=
+names.map(
+x=>n(p[x])
+);
+
+const rs=
+ranges(max);
+
+const mx=
+Math.max(
+1,
+...counts
+);
+
+const subject=
+v(p,'المادة')||'—';
+
+const grade=
+v(
+p,
+'الصف',
+'الصف / الفصل'
+)||'—';
+
+const period=
+v(
+p,
+'الفترة',
+'نوع الاختبار'
+)||'—';
+
+const totalScores=
+n(p['مجموع الدرجات'])||
+(
+avg&&total
+?Math.round(avg*total)
+:0
+);
+
+return `
+<div class="apr ana">
+
+<div class="apr-curve c1"></div>
+
+<header class="apr-head">
+
+<div class="gov">
+<b>الإدارة العامة للتعليم بمنطقة الحدود الشمالية</b>
+<span>${escapeHtml(cfg.schoolName)}</span>
+</div>
+
+<div class="apr-logo">
+${ministryLogoHTML}
+</div>
+
+</header>
+
+<div class="apr-title ana-title">
+تحليل نتيجة اختبار الفترة لمادة (${escapeHtml(subject)})
+</div>
+
+<div class="apr-meta">
+
+<div>
+<span>المرحلة الدراسية / الصف</span>
+<b>${escapeHtml(grade)}</b>
+</div>
+
+<div>
+<span>السنة / الفصل الدراسي</span>
+<b>${escapeHtml(period)}</b>
+</div>
+
+<div>
+<span>درجة القياس (الاختبار)</span>
+<b>${max}</b>
+</div>
+
+</div>
+
+<section class="ana-stat">
+
+<div class="ana-table">
+
+<h3>
+الإحصائيات التفصيلية
+</h3>
+
+<div class="ana-th">
+<span>المستوى</span>
+<span>النطاق</span>
+<span>عدد الطالبات</span>
+</div>
+
+${names.map(
+(x,i)=>`
+<div class="ana-tr">
+<span class="lv lv${i}">
+${x}
+</span>
+
+<span>
+${rs[i]}
+</span>
+
+<b>
+${counts[i]}
+</b>
+</div>
+`
+).join('')}
+
+</div>
+
+<div class="ana-kpi">
+
+<div>
+<span>عدد الطالبات</span>
+<b>${total||'—'}</b>
+</div>
+
+<div>
+<span>أعلى درجة</span>
+<b>${high||'—'}</b>
+</div>
+
+<div>
+<span>أقل درجة</span>
+<b>${low||'—'}</b>
+</div>
+
+<div>
+<span>متوسط الدرجات</span>
+<b>${avg||'—'}</b>
+</div>
+
+<div>
+<span>
+${r.type_code==='PRE'
+?'نسبة التحسن'
+:'نسبة التحصيل'
+}
+</span>
+
+<b>
+${master
+?master+'%'
+:'—'
+}
+</b>
+</div>
+
+<div>
+<span>مجموع الدرجات</span>
+<b>${totalScores||'—'}</b>
+</div>
+
+</div>
+
+</section>
+
+<section class="ana-chart">
+
+<h3>
+رسم بياني (نسبة الطالبات لكل تقدير)
+</h3>
+
+<div class="rings">
+
+${names.map(
+(x,i)=>{
+const pct=
+total
+?Math.round(
+counts[i]/total*100
+)
+:0;
+
+return `
+<div
+class="ring"
+style="
+--p:${pct};
+--c:${colors[i]}
+"
+>
+<span>
+<b>${x}</b>
+${pct}%
+</span>
+</div>
+`;
+}
+).join('')}
+
+</div>
+
+<h3>
+رسم بياني (عدد الطالبات لكل تقدير)
+</h3>
+
+<div class="bars">
+
+${names.map(
+(x,i)=>`
+<div class="baritem">
+
+<div class="bartrack">
+
+<div
+class="bar"
+style="
+height:${Math.max(
+5,
+counts[i]/mx*100
+)}%;
+background:${colors[i]}
+"
+>
+<b>${counts[i]}</b>
+</div>
+
+</div>
+
+<span>${x}</span>
+
+</div>
+`
+).join('')}
+
+</div>
+
+</section>
+
+<section class="ana-notes">
+
+${sec(
+'أبرز نقاط القوة',
+v(
+p,
+'نقاط القوة',
+'جوانب القوة'
+)
+)}
+
+${sec(
+'أبرز جوانب الضعف',
+v(
+p,
+'نقاط الضعف',
+'جوانب الضعف'
+)
+)}
+
+<div class="wide">
+
+${sec(
+'التوصيات والخطة العلاجية',
+[
+v(p,'التوصيات'),
+v(p,'الخطة العلاجية')
+]
+.filter(Boolean)
+.join('\n')
+)}
+
+</div>
+
+</section>
+
+<footer class="apr-sign">
+
+<div>
+<b>معلمة المادة</b>
+<span>
+الاسم: ........................
+</span>
+<span>
+التوقيع: ........................
+</span>
+</div>
+
+<div>
+<b>مديرة المدرسة</b>
+<span>
+الاسم: ${escapeHtml(cfg.principalName)}
+</span>
+<span>
+التوقيع: ........................
+</span>
+</div>
+
+</footer>
+</div>`;
+};
+
+window.renderCertificate=r=>{
+const p=r.data||r.payload||{};
+
+const student=
+r.type_code==='CER';
+
+const teacher=
+r.type_code==='CET';
+
+const training=
+r.type_code==='TRC';
+
+const theme=
+student
+?'student'
+:teacher
+?'teacher'
+:'training';
+
+const recipient=
+v(
+p,
+'أسماء الطالبات',
+'أسماء المعلمات',
+'اسم المنفذة',
+'المنفذة',
+'الاسم'
+)||'الاسم';
+
+const reason=
+v(
+p,
+'سبب التقدير',
+'اسم الدورة أو البرنامج'
+)||
+(
+training
+?'تنفيذ البرنامج التدريبي'
+:'التميز والمشاركة الفاعلة'
+);
+
+const copy=
+v(
+p,
+'نص التقدير'
+)||
+(
+training
+?'تشهد إدارة المدرسة بأن المعلمة الموضح اسمها قد نفذت البرنامج التدريبي، مع تمنياتنا لها بدوام التوفيق.'
+:`تتقدم إدارة المدرسة بخالص الشكر والتقدير ${
+student
+?'للطالبة'
+:'للمعلمة'
+} تقديرًا للجهود المميزة والعطاء.`
+);
+
+const hours=
+v(
+p,
+'عدد الساعات التدريبية'
+);
+
+const dates=[
+v(p,'تاريخ البداية'),
+v(p,'تاريخ النهاية')
+]
+.filter(Boolean)
+.join(' – ');
+
+return `
+<div class="apr cert ${theme}">
+
+<div class="cert-corner cc1"></div>
+<div class="cert-corner cc2"></div>
+
+<div class="medal">
+★
+</div>
+
+<header class="apr-head">
+
+<div class="gov">
+<b>الإدارة العامة للتعليم بمنطقة الحدود الشمالية</b>
+<span>
+${escapeHtml(cfg.schoolName)}
+</span>
+</div>
+
+<div class="apr-logo">
+${ministryLogoHTML}
+</div>
+
+</header>
+
+<div class="cert-body">
+
+<h1>
+${training
+?'شهادة تنفيذ برنامج تدريبي'
+:'شهادة شكر وتقدير'
+}
+</h1>
+
+<p>
+${training
+?'تشهد إدارة المدرسة بأن المعلمة'
+:'تتقدم إدارة المدرسة بخالص الشكر والتقدير إلى'
+}
+</p>
+
+<div class="recipient">
+${escapeHtml(recipient)}
+</div>
+
+<p>
+${escapeHtml(copy)}
+</p>
+
+<div class="reason">
+${escapeHtml(reason)}
+</div>
+
+${hours||dates
+?`
+<div class="details">
+
+${hours
+?`
+<span>
+عدد الساعات:
+<b>
+${escapeHtml(hours)}
+</b>
+</span>
+`
+:''
+}
+
+${dates
+?`
+<span>
+الفترة:
+<b>
+${escapeHtml(dates)}
+</b>
+</span>
+`
+:''
+}
+
+</div>
+`
+:''
+}
+
+</div>
+
+<footer class="apr-sign">
+
+<div>
+<b>
+${student
+?'معلمة البرنامج'
+:'وكيلة المدرسة'
+}
+</b>
+
+<span>الاسم</span>
+<span>التوقيع</span>
+</div>
+
+<div>
+<b>مديرة المدرسة</b>
+
+<span>
+${escapeHtml(cfg.principalName)}
+</span>
+
+<span>
+التوقيع
+</span>
+</div>
+
+</footer>
+
+</div>`;
+};
+
+window.previewReport=r=>{
+const paper=
+document.querySelector(
+'#preview .paper'
+);
+
+if(!paper){
+return
+}
+
+const cert=
+[
+'TRC',
+'CER',
+'CET'
+].includes(
+r.type_code
+);
+
+const analysis=
+[
+'GRA',
+'PRE',
+'SKL',
+'DIA'
+].includes(
+r.type_code
+);
+
+const activity=
+r.type_code==='ACT';
+
+paper.className=
+'paper '+
+(
+cert
+?'paper-certificate'
+:analysis
+?'paper-analysis'
+:'paper-report'
+);
+
+paper.innerHTML=
+cert
+?renderCertificate(r)
+:analysis
+?renderAnalysisReport(r)
+:activity
+?renderActivityReport(r)
+:renderStandardReport(r);
+};
+
+renderTemplates();
+
+if(selected){
+chooseTemplate(
+selected.code
+);
+}
+
+})();
+</script>
 </body></html>
