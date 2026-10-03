@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>منصة التقارير المدرسية</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="templates.js"></script>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="logo-card">
+<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" aria-label="وزارة التعليم">
+<defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16A085"/><stop offset="1" stop-color="#6CC7A7"/></linearGradient></defs>
+<g fill="url(#mg)">
+<circle cx="58" cy="26" r="9"/><circle cx="79" cy="29" r="8.5"/><circle cx="100" cy="34" r="8"/><circle cx="120" cy="41" r="7.5"/><circle cx="138" cy="51" r="7"/>
+<circle cx="56" cy="47" r="8.5"/><circle cx="78" cy="50" r="8"/><circle cx="99" cy="55" r="7.5"/><circle cx="119" cy="63" r="7"/><circle cx="138" cy="72" r="6.5"/>
+<circle cx="57" cy="69" r="8"/><circle cx="79" cy="72" r="7.5"/><circle cx="100" cy="78" r="7"/><circle cx="120" cy="86" r="6.5"/><circle cx="139" cy="96" r="6"/>
+<circle cx="302" cy="26" r="9"/><circle cx="281" cy="29" r="8.5"/><circle cx="260" cy="34" r="8"/><circle cx="240" cy="41" r="7.5"/><circle cx="222" cy="51" r="7"/>
+<circle cx="304" cy="47" r="8.5"/><circle cx="282" cy="50" r="8"/><circle cx="261" cy="55" r="7.5"/><circle cx="241" cy="63" r="7"/><circle cx="222" cy="72" r="6.5"/>
+<circle cx="303" cy="69" r="8"/><circle cx="281" cy="72" r="7.5"/><circle cx="260" cy="78" r="7"/><circle cx="240" cy="86" r="6.5"/><circle cx="221" cy="96" r="6"/>
+<circle cx="160" cy="61" r="5.7"/><circle cx="200" cy="61" r="5.7"/><circle cx="168" cy="77" r="5.2"/><circle cx="192" cy="77" r="5.2"/><circle cx="176" cy="92" r="5"/><circle cx="184" cy="92" r="5"/><circle cx="180" cy="107" r="5"/>
+</g>
+<text x="180" y="133" text-anchor="middle" font-size="25" font-weight="700" fill="#16A085" font-family="Arial">وزارة التعليم</text>
+<text x="180" y="151" text-anchor="middle" font-size="12.5" fill="#49A8D8" font-family="Arial">Ministry of Education</text>
+</svg>
+</div>
+  <div class="brand">منصة التقارير المدرسية</div>
+  <div class="school-side">الابتدائية الحادية عشر ومتوسطة حفصة بنت عمر برفحاء</div>
+  <nav class="nav">
+    <button class="navbtn active" data-page="home">🏠 الرئيسية</button>
+    <button class="navbtn" data-page="library">🗂️ مكتبة القوالب</button>
+    <button class="navbtn" data-page="create">📝 إنشاء تقرير</button>
+    <button class="navbtn" data-page="archive">📚 أرشيف التقارير</button>
+    <button class="navbtn" data-page="analytics">📊 الإحصائيات</button>
+    <button class="navbtn" data-page="preview">👁️ المعاينة</button>
+    <button class="navbtn" data-page="about">💡 عن المبادرة</button>
+  </nav>
+</aside>
+
+<main class="main">
+<section id="home" class="page active">
+  <div class="pro-home">
+    <div class="top-gradient"></div>
+    <div class="names">
+      <div class="name-card"><small>صاحبة المبادرة والتصميم</small><strong>فاطمة الشمري</strong></div>
+      <div class="name-card"><small>مديرة المدرسة</small><strong>منار بنت مفلح الشمري</strong></div>
+    </div>
+    <div class="official">
+      <div class="logo-card">
+<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" aria-label="وزارة التعليم">
+<defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16A085"/><stop offset="1" stop-color="#6CC7A7"/></linearGradient></defs>
+<g fill="url(#mg)">
+<circle cx="58" cy="26" r="9"/><circle cx="79" cy="29" r="8.5"/><circle cx="100" cy="34" r="8"/><circle cx="120" cy="41" r="7.5"/><circle cx="138" cy="51" r="7"/>
+<circle cx="56" cy="47" r="8.5"/><circle cx="78" cy="50" r="8"/><circle cx="99" cy="55" r="7.5"/><circle cx="119" cy="63" r="7"/><circle cx="138" cy="72" r="6.5"/>
+<circle cx="57" cy="69" r="8"/><circle cx="79" cy="72" r="7.5"/><circle cx="100" cy="78" r="7"/><circle cx="120" cy="86" r="6.5"/><circle cx="139" cy="96" r="6"/>
+<circle cx="302" cy="26" r="9"/><circle cx="281" cy="29" r="8.5"/><circle cx="260" cy="34" r="8"/><circle cx="240" cy="41" r="7.5"/><circle cx="222" cy="51" r="7"/>
+<circle cx="304" cy="47" r="8.5"/><circle cx="282" cy="50" r="8"/><circle cx="261" cy="55" r="7.5"/><circle cx="241" cy="63" r="7"/><circle cx="222" cy="72" r="6.5"/>
+<circle cx="303" cy="69" r="8"/><circle cx="281" cy="72" r="7.5"/><circle cx="260" cy="78" r="7"/><circle cx="240" cy="86" r="6.5"/><circle cx="221" cy="96" r="6"/>
+<circle cx="160" cy="61" r="5.7"/><circle cx="200" cy="61" r="5.7"/><circle cx="168" cy="77" r="5.2"/><circle cx="192" cy="77" r="5.2"/><circle cx="176" cy="92" r="5"/><circle cx="184" cy="92" r="5"/><circle cx="180" cy="107" r="5"/>
+</g>
+<text x="180" y="133" text-anchor="middle" font-size="25" font-weight="700" fill="#16A085" font-family="Arial">وزارة التعليم</text>
+<text x="180" y="151" text-anchor="middle" font-size="12.5" fill="#49A8D8" font-family="Arial">Ministry of Education</text>
+</svg>
+</div>
+      <div class="official-copy">
+        <div class="a">المملكة العربية السعودية</div>
+        <div class="b">وزارة التعليم</div>
+        <div class="c">الإدارة العامة للتعليم بمنطقة الحدود الشمالية</div>
+        <div class="d">مدرسة الابتدائية الحادية عشر ومتوسطة حفصة بنت عمر برفحاء</div>
+      </div>
+      <div></div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner">
+        <div class="initiative"><span class="docicon">▤</span><span>مبادرة لتوثيق برامج وأنشطة المدرسة</span></div>
+        <p class="description">منصة مدرسية مخصصة لتوثيق البرامج والأنشطة والمبادرات والسجلات، وحفظ الشواهد، وقياس الإنجاز والاستفادة بأسلوب رقمي منظم.</p>
+        <div class="actions">
+          <button class="btn primary" onclick="go('library')">استعراض الأقسام</button>
+          <button class="btn secondary" onclick="go('create')">＋ إنشاء تقرير</button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-head"><h3>أقسام المنصة</h3></div>
+      <div id="homeCategories" class="categories"></div>
+    </div>
+    <div class="section">
+      <div class="section-head"><h3>مؤشرات المنصة</h3></div>
+      <div class="stats">
+        <div class="stat"><small>إجمالي التقارير</small><div class="n" id="kReports">0</div></div>
+        <div class="stat"><small>تقارير هذا الشهر</small><div class="n" id="kMonth">0</div></div>
+        <div class="stat"><small>عدد المستفيدات</small><div class="n" id="kBenef">0</div></div>
+        <div class="stat"><small>عدد القوالب</small><div class="n">36</div></div>
+        <div class="stat"><small>إجمالي الزيارات</small><div class="n" id="kVisits">0</div></div>
+        <div class="stat"><small>مرات الاستفادة</small><div class="n" id="kUses">0</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-head"><h3>الإحصائيات</h3></div>
+      <div class="grid2">
+        <div class="card"><h3>التقارير حسب المجال</h3><div class="chart-box"><canvas id="catChart"></canvas></div></div>
+        <div class="card"><h3>توزيع الاستفادة</h3><div class="chart-box"><canvas id="useChart"></canvas></div></div>
+        <div class="card"><h3>نمو التقارير شهريًا</h3><div class="chart-box"><canvas id="monthChart"></canvas></div></div>
+        <div class="card"><h3>أكثر القوالب استخدامًا</h3><div class="chart-box"><canvas id="topChart"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="credit">فكرة وتصميم وتطوير المبادرة: فاطمة الشمري</div>
+</section>
+
+<section id="library" class="page">
+  <div class="top"><div><h1>مكتبة القوالب</h1><p>اختاري المجال ثم القالب المناسب.</p></div><span class="pill">36 قالبًا</span></div>
+  <div id="catbar" class="catbar"></div>
+  <div id="templates" class="templates"></div>
+</section>
+
+<section id="create" class="page">
+  <div class="top"><div><h1>إنشاء التقرير</h1><p>الحقول تتغير تلقائيًا حسب القالب المختار.</p></div><span class="pill" id="saveMode">حفظ تلقائي للمسودة</span></div>
+  <div class="card">
+    <div id="chosen" class="dynamic-title">اختاري قالبًا من مكتبة القوالب</div>
+    <div class="formgrid">
+      <div class="field"><label>عنوان التقرير *</label><input id="title"></div>
+      <div class="field"><label>تاريخ التقرير *</label><input id="date" type="date"></div>
+      <div class="field"><label>القسم / المجال</label><input id="dept"></div>
+      <div class="field"><label>عدد المستفيدات</label><input id="benef" type="number" min="0"></div>
+    </div>
+    <div class="section-head" style="margin-top:20px"><h3>حقول القالب</h3></div>
+    <div id="dynamicFields" class="formgrid"></div>
+    <div class="field full" style="margin-top:12px"><label>الشواهد والمرفقات</label><input id="attachments" type="file" multiple accept="image/*,application/pdf"></div>
+    <div class="actions no-print"><button class="btn primary" onclick="saveReport()">حفظ التقرير</button><button class="btn secondary" onclick="previewCurrent()">معاينة</button></div>
+  </div>
+</section>
+
+<section id="archive" class="page">
+  <div class="top"><div><h1>أرشيف التقارير</h1><p>بحث واسترجاع وعرض التقارير.</p></div><span class="pill" id="archiveCount">0 تقرير</span></div>
+  <div class="card">
+    <div class="filters"><input id="search" placeholder="بحث بالعنوان أو الرقم" oninput="renderArchive()"><select id="filterCat" onchange="renderArchive()"><option value="">كل المجالات</option></select><input id="filterMonth" type="month" onchange="renderArchive()"></div>
+    <div class="tablewrap"><table><thead><tr><th>رقم التقرير</th><th>العنوان</th><th>القالب</th><th>المجال</th><th>التاريخ</th><th>المستفيدات</th><th>الإجراء</th></tr></thead><tbody id="archiveRows"></tbody></table></div>
+  </div>
+</section>
+
+<section id="analytics" class="page">
+  <div class="top"><div><h1>الإحصائيات</h1><p>مؤشرات الإنجاز والاستخدام.</p></div><span class="pill" id="storageMode">الوضع المحلي</span></div>
+  <div class="stats">
+    <div class="stat"><small>التقارير المحفوظة</small><div class="n" id="aReports">0</div></div>
+    <div class="stat"><small>المستفيدات</small><div class="n" id="aBenef">0</div></div>
+    <div class="stat"><small>الزيارات</small><div class="n" id="aVisits">0</div></div>
+    <div class="stat"><small>معاينات التقارير</small><div class="n" id="aViews">0</div></div>
+    <div class="stat"><small>الطباعة / PDF</small><div class="n" id="aPrints">0</div></div>
+    <div class="stat"><small>مرات الاستفادة</small><div class="n" id="aUses">0</div></div>
+  </div>
+  <div class="grid2" style="margin-top:15px">
+    <div class="card"><h3>التقارير حسب المجال</h3><div class="chart-box"><canvas id="catChart2"></canvas></div></div>
+    <div class="card"><h3>نمو التقارير شهريًا</h3><div class="chart-box"><canvas id="monthChart2"></canvas></div></div>
+  </div>
+</section>
+
+<section id="preview" class="page">
+  <div class="top no-print"><div><h1>معاينة التقرير</h1><p>اسم صاحبة المبادرة لا يظهر في التقرير المطبوع.</p></div></div>
+  <div class="actions no-print"><button class="btn primary" onclick="printReport()">طباعة / حفظ PDF</button><button class="btn secondary" onclick="go('create')">العودة للتعديل</button></div>
+  <div class="paper">
+    <div class="report-head">
+      <div></div>
+      <div><h2>الابتدائية الحادية عشر ومتوسطة حفصة بنت عمر برفحاء</h2><div style="text-align:center;font-size:11px;color:#72877f">العام الدراسي 1448هـ</div></div>
+      <div>
+<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" aria-label="وزارة التعليم">
+<defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16A085"/><stop offset="1" stop-color="#6CC7A7"/></linearGradient></defs>
+<g fill="url(#mg)">
+<circle cx="58" cy="26" r="9"/><circle cx="79" cy="29" r="8.5"/><circle cx="100" cy="34" r="8"/><circle cx="120" cy="41" r="7.5"/><circle cx="138" cy="51" r="7"/>
+<circle cx="56" cy="47" r="8.5"/><circle cx="78" cy="50" r="8"/><circle cx="99" cy="55" r="7.5"/><circle cx="119" cy="63" r="7"/><circle cx="138" cy="72" r="6.5"/>
+<circle cx="57" cy="69" r="8"/><circle cx="79" cy="72" r="7.5"/><circle cx="100" cy="78" r="7"/><circle cx="120" cy="86" r="6.5"/><circle cx="139" cy="96" r="6"/>
+<circle cx="302" cy="26" r="9"/><circle cx="281" cy="29" r="8.5"/><circle cx="260" cy="34" r="8"/><circle cx="240" cy="41" r="7.5"/><circle cx="222" cy="51" r="7"/>
+<circle cx="304" cy="47" r="8.5"/><circle cx="282" cy="50" r="8"/><circle cx="261" cy="55" r="7.5"/><circle cx="241" cy="63" r="7"/><circle cx="222" cy="72" r="6.5"/>
+<circle cx="303" cy="69" r="8"/><circle cx="281" cy="72" r="7.5"/><circle cx="260" cy="78" r="7"/><circle cx="240" cy="86" r="6.5"/><circle cx="221" cy="96" r="6"/>
+<circle cx="160" cy="61" r="5.7"/><circle cx="200" cy="61" r="5.7"/><circle cx="168" cy="77" r="5.2"/><circle cx="192" cy="77" r="5.2"/><circle cx="176" cy="92" r="5"/><circle cx="184" cy="92" r="5"/><circle cx="180" cy="107" r="5"/>
+</g>
+<text x="180" y="133" text-anchor="middle" font-size="25" font-weight="700" fill="#16A085" font-family="Arial">وزارة التعليم</text>
+<text x="180" y="151" text-anchor="middle" font-size="12.5" fill="#49A8D8" font-family="Arial">Ministry of Education</text>
+</svg>
+</div>
+    </div>
+    <div class="report-title"><h3 id="pTitle">تقرير مدرسي</h3></div>
+    <div class="meta">
+      <div class="metabox">رقم التقرير: <span id="pNum">—</span></div>
+      <div class="metabox">التاريخ: <span id="pDate">—</span></div>
+      <div class="metabox">القالب: <span id="pTemplate">—</span></div>
+      <div class="metabox">المجال: <span id="pCat">—</span></div>
+      <div class="metabox">القسم: <span id="pDept">—</span></div>
+      <div class="metabox">عدد المستفيدات: <span id="pBenef">—</span></div>
+    </div>
+    <div id="pFields"></div>
+    <div id="pAttachments" class="block"></div>
+    <div class="sign"><div>مديرة المدرسة<br><strong>منار بنت مفلح الشمري</strong></div><div>صفحة 1</div></div>
+  </div>
+</section>
+
+<section id="about" class="page">
+  <div class="top"><div><h1>عن المبادرة</h1><p>تعريف بالمنصة وصاحبة المبادرة.</p></div></div>
+  <div class="card"><h3>منصة التقارير المدرسية</h3><p style="line-height:2;color:var(--muted)">مبادرة رقمية لتنظيم التقارير والسجلات المدرسية، حفظ الشواهد، قياس الإنجاز، والاستفادة من التقنيات الحديثة في دعم العمل المدرسي.</p><p><strong>فكرة وتصميم وتطوير المبادرة: فاطمة الشمري</strong></p><p><strong>مديرة المدرسة: منار بنت مفلح الشمري</strong></p></div>
+</section>
+</main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
